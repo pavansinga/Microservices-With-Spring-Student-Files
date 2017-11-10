@@ -30,3 +30,10 @@ spring:
   profiles: noun
 words: boat,book,vote,seat,backpack,partition,groundhog
   
+---
+hystrix:
+    command:
+        default:
+            circuitBreaker:
+               errorThresholdPercentage: 10 # 50%
+               sleepWindowInMilliseconds: 5000 # 5s
